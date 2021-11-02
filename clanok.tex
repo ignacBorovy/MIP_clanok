@@ -1,6 +1,6 @@
 % Metódy inžinierskej práce
 
-\coursepaper[10pt,twoside,slovak,a4paper]{article}
+\documentclass[10pt,twoside,slovak,a4paper]{article}
 
 \usepackage[slovak]{babel}
 %\usepackage[T1]{fontenc}
@@ -15,15 +15,15 @@
 
 \pagestyle{headings}
 
-\title{Názov\thanks{Semestrálny projekt v predmete Metódy inžinierskej práce, ak. rok 2015/16, vedenie: Meno Priezvisko}} % meno a priezvisko vyučujúceho na cvičeniach
+\title{Vývoj crossplatformových (OS) aplikácii\thanks{Semestrálny projekt v predmete Metódy inžinierskej práce, ak. rok 2015/16, vedenie: Vladimír Mlynárovič}}
 
-\author{Meno Priezvisko\\[2pt]
+\author{Ignác Borový\\[2pt]
 	{\small Slovenská technická univerzita v Bratislave}\\
 	{\small Fakulta informatiky a informačných technológií}\\
 	{\small \texttt{...@stuba.sk}}
 	}
 
-\date{\small 30. september 2015} % upravte
+\date{\small 19. october 2021}
 
 
 
@@ -31,40 +31,35 @@
 
 \maketitle
 
-\begin{abstract}
-\ldots
-\end{abstract}
-
-
 
 \section{Úvod}
+\quad
+Keďže tu máme rôzne typy zariadený mobily, tablety, počítače a atd.. Tak na tieto zariadenia existuje veľa rôznych operačných systémov ako je Windows, Linux, Android a ďalšie. Tu nám vzniká problém ako vyvinúť software tak aby fungoval na všetky tieto operačné systémy, keďže každý systém na inakšiu architektúru a nástroje. 
 
-Motivujte čitatela
+Riešením je crossplatformový vývoj. Zamerám sa hlavne na to ako sa technologie vysporiadavajú s týmto problémov prenositeľnosti. Čiže sa budem zaoberať ako aplikácia dokáže nezávisle fungovať od platformy, akú architektúru takéto aplikácie používajú a ako taký kód vo finále vyzerá.
 
+\section{Prenositeľnosť}
+\subsection{Výhody a nevýhody}
 
+\quad
+Softwerova prenositeľnosť ma rôzný význam pre rôzných ľudí. V našom prípade sa jedná o prenositeľnosť softwaru medzi rôznymi platformami v našom prípade OS. Najväčšia výhoda platformovej prenositeľnosti je že dokážeme väčšiu skupinu uživateľov ktorý používaju rôzne operačné sýstemy. 
+Ďalšími výhodami sú:
+\begin{itemize}
+    \item menšia cena za vývoj aplikácie
+    \item ľahší vývoj a ľahšie údržba aplikácie.
+\end{itemize}
+Nevýhody:
+\begin{itemize}
+    \item pomalšia rýchlosť aplikácie
+    \item väčšia veľkosť aplikácie
+\end{itemize}
 
-\section{Nejaká časť} \label{nejaka}
-
-Z obr.~\ref{f:rozhod} je všetko jasné. 
-
-\begin{figure*}[tbh]
-\centering
-%\includegraphics[scale=1.0]{diagram.pdf}
-Aj text môže byť prezentovaný ako obrázok. Stane sa z neho označný plávajúci objekt. Po vytvorení diagramu zrušte znak \texttt{\%} pred príkazom \verb|\includegraphics| označte tento riadok ako komentár (tiež pomocou znaku \texttt{\%}).
-\caption{Rozhodujúci argument.}
-\label{f:rozhod}
-\end{figure*}
-
-
-
-\section{Iná časť} \label{ina}
-
-Základným problémom je teda\ldots{} Najprv sa pozrieme na nejaké vysvetlenie (časť~\ref{ina:nejake}), a potom na ešte nejaké (časť~\ref{ina:nejake}).\footnote{Niekedy môžete potrebovať aj poznámku pod čiarou.}
-
-Môže sa zdať, že problém vlastne nejestvuje\cite{Coplien:MPD}, ale bolo dokázané, že to tak nie je~\cite{Czarnecki:Staged, Czarnecki:Progress}. Napriek tomu, aj dnes na webe narazíme na všelijaké pochybné názory\cite{PLP-Framework}. Dôležité veci možno \emph{zdôrazniť kurzívou}.
+\subsection{Typy riešenia prenositeľnosti}
 
 
-\subsection{Nejaké vysvetlenie} \label{ina:nejake}
+
+
+\section{}
 
 Niekedy treba uviesť zoznam:
 
