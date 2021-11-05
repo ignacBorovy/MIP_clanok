@@ -32,17 +32,18 @@
 \maketitle
 
 
-\section{Úvod}
+\section{Úvod} \label{Uvod}
 \quad
 Keďže tu máme rôzne typy zariadený mobily, tablety, počítače a atd.. Tak na tieto zariadenia existuje veľa rôznych operačných systémov ako je Windows, Linux, Android a ďalšie. Tu nám vzniká problém ako vyvinúť software tak aby fungoval na všetky tieto operačné systémy, keďže každý systém na inakšiu architektúru a nástroje. 
 
 Riešením je crossplatformový vývoj. Zamerám sa hlavne na to ako sa technologie vysporiadavajú s týmto problémov prenositeľnosti. Čiže sa budem zaoberať ako aplikácia dokáže nezávisle fungovať od platformy, akú architektúru takéto aplikácie používajú a ako taký kód vo finále vyzerá.
+\cite{Crossplatform}
 
 \section{Prenositeľnosť}
 \subsection{Výhody a nevýhody}
 
 \quad
-Softwerova prenositeľnosť ma rôzný význam pre rôzných ľudí. V našom prípade sa jedná o prenositeľnosť softwaru medzi rôznymi platformami v našom prípade OS. Najväčšia výhoda platformovej prenositeľnosti je že dokážeme väčšiu skupinu uživateľov ktorý používaju rôzne operačné sýstemy. 
+Softwerova prenositeľnosť ale portovanie softwaru ma rôzný význam pre rôzných ľudí. V našom prípade sa jedná o prenositeľnosť softwaru medzi rôznymi platformami v našom prípade OS. Najväčšia výhoda platformovej prenositeľnosti je že dokážeme väčšiu skupinu uživateľov ktorý používaju rôzne operačné sýstemy. 
 Ďalšími výhodami sú:
 \begin{itemize}
     \item menšia cena za vývoj aplikácie
@@ -54,64 +55,27 @@ Nevýhody:
     \item väčšia veľkosť aplikácie
 \end{itemize}
 
-\subsection{Typy riešenia prenositeľnosti}
+\subsection{Platformová nezávislosť programovacím jazykom} \label{PlatformovaNezavislost}
+
+\quad
+Našim cieľom je dosiahnuť aby softwer mohol fungovať nezávisle od hardwaru stroja alebo operačného systému.
+\quad
+Vhodným jazykom na vývoj tohto softwéru je interpretovaný programovací jazyk JAVA. Interpretovaný jazyk je jazyk ktorý nekompiluje kód do zdrojového kódu ale do takzvaného \textbf{medzikódu} (ByteCode). Výhodou tohoto je, že tento mezikód je spustani na virtuálním stroji Javy (JVM - Java Virtual Machine). Program teda stačí napísat iba raz a môžme ho spustiť všade kde je nainštalovaní JVM.
 
 
+Toto so sebou aj prináša že, aplikácie sú značne pomalejšie, oproti natívnym aplikáciam. Aby sa vyhlo tejto pomalosti, vyvinula firma Sun takzvaný \textbf{Just In Time Compiler} (JIT). Ten zrychluje aplikácie tak, že mezikód prekládá do strojového kódu procesoru. Správa paměti je zabezpečena pomocí automatického garbage collectoru. Ten vyhladá nepoužívané časti pamäti a uvolňuje ju.
+\cite{Java}
 
-
-\section{}
-
-Niekedy treba uviesť zoznam:
-
-\begin{itemize}
-\item jedna vec
-\item druhá vec
-	\begin{itemize}
-	\item x
-	\item y
-	\end{itemize}
-\end{itemize}
-
-Ten istý zoznam, len číslovaný:
-
-\begin{enumerate}
-\item jedna vec
-\item druhá vec
-	\begin{enumerate}
-	\item x
-	\item y
-	\end{enumerate}
-\end{enumerate}
-
-
-\subsection{Ešte nejaké vysvetlenie} \label{ina:este}
-
-\paragraph{Veľmi dôležitá poznámka.}
-Niekedy je potrebné nadpisom označiť odsek. Text pokračuje hneď za nadpisom.
-
-
-
-\section{Dôležitá časť} \label{dolezita}
-
-
-
-
-\section{Ešte dôležitejšia časť} \label{dolezitejsia}
-
-
-
-\section{Ešte dôležitejšia časť}
-
-
-
-\section{Záver} \label{zaver} % prípadne iný variant názvu
-
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[scale=0.6]{javaByteCode.png}
+    \caption{Kompilácia java kódu do ByteKódu a jeho spuštanie na jednotlivých platformách}
+\end{figure}
 
 
 %\acknowledgement{Ak niekomu chcete poďakovať\ldots}
 
 
-% týmto sa generuje zoznam literatúry z obsahu súboru literatura.bib podľa toho, na čo sa v článku odkazujete
-\bibliography{literatura}
-\bibliographystyle{plain} % prípadne alpha, abbrv alebo hociktorý iný
+\bibliography{bibliografia}{}
+\bibliographystyle{plain}
 \end{document}
